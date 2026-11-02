@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Page Assistant</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <span class="mark" aria-hidden="true">¶</span>
+      <div class="app__heading">
+        <h1>Page Assistant</h1>
+        <p class="app__page-title" id="pageTitle">Reading this page…</p>
+      </div>
+    </header>
+
+    <main class="app__body">
+      <label class="field-label" for="question">Ask about this page</label>
+      <textarea
+        id="question"
+        rows="3"
+        placeholder="e.g. What are the key points here?"
+      ></textarea>
+
+      <button id="askBtn" type="button">
+        <span class="btn-label">Ask</span>
+      </button>
+
+      <p id="status" class="status" role="status"></p>
+
+      <section id="answerWrap" class="answer hidden">
+        <span class="answer__tag">Answer</span>
+        <p id="answer" class="answer__text"></p>
+      </section>
+    </main>
+
+    <footer class="app__footer">
+      <span id="sourceUrl" class="source-url"></span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
